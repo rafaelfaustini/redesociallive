@@ -3,7 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
-echo 'post';
+
 
 
 
@@ -44,26 +44,18 @@ echo 'post';
 <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST" id="registro">
 <div class="form-group mt-5">
 <label>Nome</label>
-<input class="form-control input-lg">
+<input class="form-control input-lg" name="input_nome" required>
 </div>
 <div class="form-group mt-2">
 <label>Email</label>
-<input class="form-control input-lg">
+<input class="form-control input-lg" name="input_email" required>
 </div>
 <div class="form-group mt-2">
 <label>Senha</label>
-<input class="form-control input-lg">
+<input class="form-control input-lg" name="input_senha" required>
 </div>
 
-<div onclick="eventoclique();" class="btn bg-primary btn-lg text-white">Registrar</div>
-<script>
-
-function eventoclique(){
-  document.getElementById("registro").submit();
-}
-
-
-</script>
+<button class="btn bg-primary btn-lg text-white" type="submit">Registrar</button>
 
 </form>
 
